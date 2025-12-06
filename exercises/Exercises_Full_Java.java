@@ -1,5 +1,7 @@
 package exercises;
 
+import java.util.Scanner;
+
 public class Exercises_Full_Java {
  
 // EXERCISE 1: Matrix addition with random numbers
@@ -26,6 +28,28 @@ public class Exercises_Full_Java {
 // 15 15 32
 // 7   8 24
 // 33 13 21
+
+
+public void SumAleatoryArrays() {
+    Scanner showme = new Scanner(System.in);
+    System.out.println("Enter the size of the matrices");
+    int Number = showme.nextInt();
+
+    int[][] MA = new int[Number][Number];
+    int[][] MB = new int[Number][Number];
+    int[][] MSum = new int[Number][Number];
+
+    // Fill matrices
+    for (int i = 0; i < Number; i++) {
+        for (int j = 0; j < Number; j++) {
+            MA[i][j] = (int) (Math.random() * 51); 
+            MB[i][j] = (int) (Math.random() * 51); 
+            MSum[i][j] = MA[i][j] + MB[i][j];
+        }
+    }
+
+    showme.close();
+}
 
 
 
