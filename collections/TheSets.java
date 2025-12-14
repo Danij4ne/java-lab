@@ -3,28 +3,28 @@ package collections;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-//unicamente almacena datos unicos (no admite repetidos ) y no estan ordenados los datos siempre estan en posiciones diferentes
-//set es muy obtimo para buscar elementos dentro del propio set 
+//only stores unique data (does not allow duplicates) and data is not ordered, elements are always in different positions
+//set is very efficient for searching elements inside the set
 public class TheSets {
     public static void main(String[] args) {
         
-        //declaracion y creacion
+        //declaration and creation
 
         HashSet<String> names = new HashSet<>();
 
 
-        //declaracion y creacion moderna con int + variable 
+        //modern declaration and creation with int + variable 
 
         var numbers = new HashSet<Integer>(); 
 
 
 
-        //tamaño 
+        //size 
 
         System.out.println(names.size());
 
 
-         //añadir elementos 
+         //add elements 
 
         names.add("Dani");
         names.add("Jane");
@@ -32,41 +32,34 @@ public class TheSets {
         System.out.println(names.size());
 
 
-        //buscar elementos 
+        //search elements 
 
         names.contains("Dani"); //True 
         names.contains("Daniel"); //False 
 
 
-        //eliminar elementos 
+        //remove elements 
 
-        names.remove("Dani"); //le dices directamente el nombre del elemento que quieres borrar
-        System.out.println(names.size()); // el size sera 1 menos porque hemos eliminado una variable con remove
+        names.remove("Dani"); //you directly specify the name of the element you want to delete
+        System.out.println(names.size()); //the size will be 1 less because we removed an element with remove
 
         //names.addAll(numbers); Error 
 
-        var countries = new HashSet<String>(); // creamos un nuevo set
+        var countries = new HashSet<String>(); //we create a new set
 
-        //añadimos elementos 
+        //add elements 
 
         countries.add("España");
         countries.add("Mexico");
         countries.add("Argentina");
         
-        names.addAll(countries);  // añadimos todos los elementos de countries a names 
+        names.addAll(countries);  //we add all elements from countries to names
 
         System.out.println(names);
 
-        //eliminar elementos 
+        //remove elements 
 
-        names.removeAll(countries); //elimina todos los elementos que habiamos fusioando de countries 
-
-
-
-
-
-
-
+        names.removeAll(countries); //removes all elements that we previously merged from countries
 
     }
     
